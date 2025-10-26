@@ -1,7 +1,8 @@
 #include <stdio.h>
 //declaring and defining funtion
 int SEARCH(int array[], int size, int target) {
-    for(int i=0; i<size; i++) {
+	int i;
+    for(i=0; i<size; i++) {
         if (array[i]==target) {
             return i;
         }
@@ -10,13 +11,13 @@ int SEARCH(int array[], int size, int target) {
 }
 //calling the function to test its working
 int main() {
-    int array[10], target, index;
+    int array[10], target, index, i;
     printf("Enter 10 integers:\n");
-    for (int i=0; i<10; i++) {
+    for (i=0; i<10; i++) {
         printf("Element %d: ", i+1);
         scanf("%d", &array[i]);
     }
-    printf("/nWhat number do you want to search: ");
+    printf("What number do you want to search: ");
     scanf("%d", &target);
     index = SEARCH(array, 10, target);
     if (index != -1) {
